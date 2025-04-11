@@ -1,1 +1,3 @@
-// Flows will be imported for their side effects in this file.
+import '@/ai/flows/generate-habit-ideas.ts';
+import '@/ai/flows/summarize-habit-progress.ts';
+import '@/ai/flows/provide-personalized-tips.ts';
