@@ -1,7 +1,11 @@
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Progress} from '@/components/ui/progress';
+'use client';
+
+import {useRouter} from 'next/navigation';
+import {Button} from '@/components/ui/button';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -13,19 +17,11 @@ export default function Home() {
         </h1>
 
         <p className="mt-3 text-2xl">
-          Get started by building your micro-habits!
+          Start building and tracking your micro-habits today!
         </p>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <Card className="w-96">
-            <CardHeader>
-              <CardTitle>Track Your Progress</CardTitle>
-              <CardDescription>Visualize your habit completion over time.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Progress value={66} />
-            </CardContent>
-          </Card>
+        <div className="mt-10">
+          <Button onClick={() => router.push('/dashboard')}>Go to Dashboard</Button>
         </div>
       </main>
     </div>
