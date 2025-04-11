@@ -7,7 +7,13 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div
+      className="flex flex-col items-center justify-center min-h-screen py-2"
+      style={{
+        backgroundImage:
+          'linear-gradient(to bottom, #F0F0F0, #FFFFFF)', // Light gray to white gradient
+      }}
+    >
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
