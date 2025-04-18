@@ -1,23 +1,17 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Required for GitHub Pages static export
-  output: "export",
-  
-  // Set this to your repository name (e.g., "/studio")
-  basePath: "/studio",
-  
-  // Disable image optimization (required for static exports)
-  images: {
-    unoptimized: true,
-  },
-  
-  // Keep your existing configurations
+  // ✅ Safe build for TS and ESLint
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+
+  // ✅ If you're using instrumentation (e.g., telemetry)
+  experimental: {
+    instrumentationHook: true,
   },
 };
 
