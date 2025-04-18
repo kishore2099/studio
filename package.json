@@ -66,5 +66,4 @@
     "typescript": "^5"
   }
 }
-npm install @opentelemetry/exporter-jaeger
 
